@@ -25,7 +25,7 @@ class Weconn {
         this.log = log;
         this.config = config;
         this.name = config.name;
-        this.mac = config.mac;
+        this.mac = config.mac.replace(/:/g,'');
         this.state = true;
     }
 
@@ -70,9 +70,9 @@ class Weconn {
         client.connect(9957, this.config.ip_address, () => {
             let buffer;
             if (state) {
-                buffer = this.createBufferFromCommand(ON_CODE.replace('xxxxxxxxxxxx', this.config.mac));
+                buffer = this.createBufferFromCommand(ON_CODE.replace('xxxxxxxxxxxx', this.mac));
             } else {
-                buffer = this.createBufferFromCommand(OFF_CODE.replace('xxxxxxxxxxxx', this.config.mac));
+                buffer = this.createBufferFromCommand(OFF_CODE.replace('xxxxxxxxxxxx', this.mac));
             }
             this.state = state;
             client.write(buffer, null, () => {

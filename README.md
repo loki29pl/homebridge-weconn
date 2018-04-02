@@ -8,6 +8,11 @@ This is a Homebridge plugin for WeComm Smart Plugs
 
 - Ferguson Smart WiFi Plug (http://ferguson-digital.eu/inteligentny-dom-ferguson/inteligentna-wtyczka-smart-w-fi-plug/)
 
+## Instalation
+
+1. Install homebridge 
+2. Install this plugin `npm install -g homebridge-weconn`
+
 ## Sample configuration:
 
         "accessories": [
