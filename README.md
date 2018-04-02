@@ -1,4 +1,4 @@
-# Homebridge WeComm Plugin
+# Homebridge WeConn Plugin
 
 ## Introduction
 
