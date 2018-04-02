@@ -1,0 +1,21 @@
+{
+    "name": "homebridge-weconn",
+    "version": "0.0.1",
+    "description": "Plugin for handling weconn smartplugs",
+    "license": "ISC",
+    "author": "Michał Ochociński",
+    "keywords": [
+      "homebridge-plugin"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/loki29pl/homebridge-weconn"
+    },
+    "bugs": {
+      "url": "https://github.com/loki29pl/homebridge-weconn/issues"
+    },
+    "engines": {
+      "node": ">=0.12.0",
+      "homebridge": ">=0.2.0"
+    }
+  }
