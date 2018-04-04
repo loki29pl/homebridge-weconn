@@ -33,6 +33,9 @@ This is a Homebridge plugin for WeConn Smart Plugs
 ### Debug mode
 
         "accessories": [
-            ...
-            "debug": true
+            {
+                ...
+                "debug": true
+                ...
+            }
         ]
