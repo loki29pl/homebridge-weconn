@@ -15,6 +15,9 @@ const GET_INFO = '0101030138000000010000005c6c5c6c000000000000000000000000000000
 
 class Weconn {
     constructor(log, config) {
+        if (config['debug']) {
+            console.log('Homebridge-WeConn starting...');
+        }
         if (!config.ip_address) {
             throw new Error('Error in WeConn accessory. Missing IP Address');
         }
@@ -30,6 +33,9 @@ class Weconn {
     }
 
     getServices() {
+        if (config['debug']) {
+            console.log('Homebridge-WeConn getServices called');
+        }
         var informationService = new Service.AccessoryInformation();
 
         informationService
@@ -43,7 +49,7 @@ class Weconn {
             .on('get', this.getPowerState.bind(this))
             .on('set', this.setPowerState.bind(this));
 
-        return [service];
+        return [ service ];
     }
 
     getPowerState(callback) {
