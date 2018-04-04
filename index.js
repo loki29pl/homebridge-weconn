@@ -33,7 +33,7 @@ class Weconn {
     }
 
     getServices() {
-        if (config['debug']) {
+        if (this.config['debug']) {
             console.log('Homebridge-WeConn getServices called');
         }
         var informationService = new Service.AccessoryInformation();
