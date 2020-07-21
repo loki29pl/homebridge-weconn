@@ -21,7 +21,9 @@ class Weconn {
         if (!config.ip_address) {
             throw new Error('Error in WeConn accessory. Missing IP Address');
         }
-        if (!config.port) {
+        if (config.port) {
+            this.port = config.port;
+        } else {
             this.port = 9957;
         }
         if (!config.mac) {
@@ -59,7 +61,7 @@ class Weconn {
         let state = false;
 
         var client = new net.Socket();
-        client.connect(this.config.port, this.config.ip_address, () => {
+        client.connect(this.port, this.config.ip_address, () => {
             let buffer = this.createBufferFromCommand(GET_INFO.replace('xxxxxxxxxxxx', this.mac));
             client.write(buffer);
         });
@@ -76,7 +78,7 @@ class Weconn {
 
     setPowerState(state, callback) {
         var client = new net.Socket();
-        client.connect(this.config.port, this.config.ip_address, () => {
+        client.connect(this.port, this.config.ip_address, () => {
             let buffer;
             if (state) {
                 buffer = this.createBufferFromCommand(ON_CODE.replace('xxxxxxxxxxxx', this.mac));
