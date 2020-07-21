@@ -1,6 +1,6 @@
 {
     "name": "homebridge-weconn",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Plugin for handling weconn smartplugs",
     "license": "GPL-3.0-or-later",
     "author": "Michał Ochociński",

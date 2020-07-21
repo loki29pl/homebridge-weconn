@@ -21,7 +21,7 @@ This is a Homebridge plugin for WeConn Smart Plugs
                 "name": "Plug name",
                 "ip_address": "192.168.1.3",
                 "mac": "adbd11235611"
-                
+                "port": 9956
             }
         ]
 
